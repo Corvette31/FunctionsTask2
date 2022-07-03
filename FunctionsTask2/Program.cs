@@ -26,10 +26,10 @@ namespace FunctionsTask2
             int precentValue = random.Next(minPrecentValue, maxPrecentValue) / divider;
             int precent = precentValue * divider;
             ConsoleColor currentColor = Console.BackgroundColor;
-
             Console.ForegroundColor = color;
             Console.SetCursorPosition(positionX, positionY);
             Console.Write('[');
+
             for (int i = 0; i < maxValue; i++)
             {
                 if (i < precentValue)
@@ -41,6 +41,7 @@ namespace FunctionsTask2
                     Console.Write('_');
                 }
             }
+
             Console.Write(']' + text + $" {precent}%");
             Console.ForegroundColor = currentColor;
         }
